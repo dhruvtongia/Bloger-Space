@@ -4,6 +4,7 @@ const blogRoutes=require('./routers/blogRoutes');
 const commentRoutes=require('./routers/commentRoutes');
 require('dotenv').config();
 
+const PORT=process.env.PORT ||3000;
 // createing express app
 const app=express();
 
@@ -11,7 +12,7 @@ const app=express();
 mongoose.connect(process.env.URIdb,{useNewUrlParser:true,useUnifiedTopology:true})
     .then(result=>{
 
-        app.listen(process.env.PORT);
+        app.listen(PORT);
     })
     .catch(err=>{
         console.log(err);
