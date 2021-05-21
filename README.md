@@ -21,3 +21,7 @@ I have implemented all levels .
 
 • POST : Post a comment on post -- by clicking  on post button inside each blog in comment form or sending post request to /blogs/:id/comment  <br>
 • GET : Get all comment for a post -- by clicking  on read more for each blog or going to /blogs/:id . Each blog has its comments there.  <br>
+
+
+Postman colllection link--
+https://www.getpostman.com/collections/f2fb15329b05b0932325
