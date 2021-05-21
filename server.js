@@ -2,14 +2,14 @@ const express=require('express');
 const mongoose=require('mongoose');
 const blogRoutes=require('./routers/blogRoutes');
 const commentRoutes=require('./routers/commentRoutes');
-require('dotenv').config();
+const {URIdb}=require('./config/keys');
 
 const PORT=process.env.PORT ||3000;
 // createing express app
 const app=express();
 
 // connecting to the mongodb 
-mongoose.connect(process.env.URIdb,{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect(URIdb,{useNewUrlParser:true,useUnifiedTopology:true})
     .then(result=>{
 
         app.listen(PORT);
