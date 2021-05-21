@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+    
+    <form action="/blogs/edit/<%=blog._id%>" method="POST" class="container" >
+        <label for="title" class=" mt-3 form-label">Title</label>
+        <input type="text" name="title"  class="form-control" value="<%=blog.title%>" required>
+        <label for="snippet" class="form-label">Snippet</label>
+        <input type="text" name="snippet"  class="form-control" value="<%=blog.snippet%>" required>
+        <label for="body" class="form-label">Body</label>
+       <input name="body"  class="form-control" type="text" value="<%=blog.body%>" required></textarea>
+       <button class="mt-3 btn btn-primary">Edit</button>
+    </form>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
